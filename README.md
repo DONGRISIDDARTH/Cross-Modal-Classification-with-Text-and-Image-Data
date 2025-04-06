@@ -3,13 +3,13 @@ Developed and integrated separate text and image classification models on the 10
 
 
 Approach:
-Text Classification:
 
+Text Classification:
 First, I trained the text classification model using BERT (Bidirectional Encoder Representations from Transformers) and HAN (Hierarchical Attention Networks).
 The training process was run and logs were saved to monitor performance and fine-tune the model.
-Image Classification:
 
-Next, I trained the image classification model using InceptionResNetV2, which is a deep convolutional neural network known for its high accuracy in image recognition tasks.
+Image Classification:
+I trained the image classification model using InceptionResNetV2, which is a deep convolutional neural network known for its high accuracy in image recognition tasks.
 Similarly, training logs were saved during this process for later analysis.
 Fusion (Cross-Modal Classification):
 
