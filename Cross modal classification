@@ -255,11 +255,8 @@ sentence_context_vector, _ = SentenceAttention(128)(seq_out)
 # Reshape sentence context vector to add a sequence dimension
 sentence_context_expanded = layers.Reshape((-1, 128))(sentence_context_vector)
 
-# Bidirectional GRU layer after sentence-level attention
-bidirectional_gru_out = layers.Bidirectional(layers.GRU(128, return_sequences=True))(sentence_context_expanded)
-
 # Hierarchical attention
-document_context_vector, _ = WordAttention(128)(bidirectional_gru_out)
+document_context_vector, _ = WordAttention(128)(sentence_context_expanded)
 
 # Reshape the document context vector to make it compatible with the Dense layer
 document_context_vector_expanded = layers.Reshape((-1,))(document_context_vector)
