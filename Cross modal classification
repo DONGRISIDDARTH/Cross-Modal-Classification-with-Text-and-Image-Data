@@ -365,11 +365,11 @@ from google.colab import drive
 drive.mount("/content/drive")
 train_data_dir = '/content/drive/My Drive/pro/images/train'
 validation_data_dir = '/content/drive/My Drive/pro/images/test'
-nb_train_samples = 7968
-nb_validation_samples = 2012
-n_classes = 45
+nb_train_samples = 79680
+nb_validation_samples = 20120
+n_classes = 101
 epochs = 10
-batch_size=40
+batch_size=250
 
 # Checking image format: if RGB channel is coming first or last so, model will check first and then input shape will be feeded accordingly.
 img_width = 299
